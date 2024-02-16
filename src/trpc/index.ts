@@ -42,6 +42,12 @@ export const appRouter = router({
     });
   }),
 
+  getFile: privateProcedure
+    .input(z.object({ key: z.string() }))
+    .mutation(async ({ ctx, input }) => {
+      const { userId } = ctx;
+    }),
+
   deleteFile: privateProcedure
     .input(z.object({ id: z.string() }))
     .mutation(async ({ ctx, input }) => {
