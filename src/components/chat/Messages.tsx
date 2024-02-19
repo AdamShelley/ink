@@ -1,4 +1,4 @@
-const Messages = () => {
+const Messages = ({ fileId }: any) => {
   return <div>Messages</div>;
 };
 
